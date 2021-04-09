@@ -1,9 +1,4 @@
-# docker-laravel 🐳
-
-![License](https://img.shields.io/github/license/ucan-lab/docker-laravel?color=f05340)
-![Stars](https://img.shields.io/github/stars/ucan-lab/docker-laravel?color=f05340)
-![Issues](https://img.shields.io/github/issues/ucan-lab/docker-laravel?color=f05340)
-![Forks](https://img.shields.io/github/forks/ucan-lab/docker-laravel?color=f05340)
+# Laravel with Docker🐳
 
 ## Introduction
 
@@ -59,3 +54,10 @@ If you want to delete MySQL data intentionally, execute the following command.
 ```bash
 $ docker-compose down -v && docker-compose up
 ```
+
+#### Skills stack
+
+- Laravel - Base MVC Framework
+- Fortify - Laravel's pack of auth features
+- Livewire - A full-stack framework for Laravel
+- AlpineJS - A reactive js framework like Vue.js and React
