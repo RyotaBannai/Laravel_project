@@ -20,13 +20,18 @@
         </div>
         @if (session()->has('sweet_alert.alert'))
         <script>
-            swal("{!! session()->get('sweet_alert.alert') !!}");
+            // swal("{!! session()->get('sweet_alert.alert') !!}");
+            toastr.warning("{!! session()->get('sweet_alert.alert') !!}");
         </script>
         @endif
 
         <input wire:model="name" type="text">
         <br>
-        @error('name') <span class="error">{{ $message }}</span> @enderror
+        @error('name') <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+            <strong class="font-bold">Holy smokes!</strong>
+            <span class="block sm:inline">{{ $message }}</span>
+          </div>
+        @enderror
         <br>
         <button type="submit">Save</button>
     </form>

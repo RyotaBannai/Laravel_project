@@ -6,8 +6,10 @@ use App\Models\Account;
 
 use Livewire\Component;
 use Alert;
+use Log;
 // toastr https://github.com/yoeunes/toastr
 // sweetalert https://github.com/uxweb/sweet-alert
+// tailwind https://v1.tailwindcss.com/components/alerts
 
 class ListAccounts extends Component
 {
@@ -32,13 +34,17 @@ class ListAccounts extends Component
 
     public function save()
     {
-        // $this->validate();
+        $this->validate();
         $this->name = "saved";
         // request()->session()->flash('flash.banner', 'Yay it works!');
         $this->emitUp('banner-message');
-        // session()->flash('message', 'success');
+        session()->flash('message', 'success');
+        // dd(session());
         // return $this->redirect('/');
         // return view('livewire.list-accounts');
+
+
+        request()->session()->flash('sweet_alert.alert', 'Yay it works!');
         // toastr()->info('Are you the 6 fingered man?'); // doesn't work
     }
 
