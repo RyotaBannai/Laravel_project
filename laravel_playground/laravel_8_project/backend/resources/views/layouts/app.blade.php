@@ -16,6 +16,8 @@
         <!-- Alert -->
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Roboto@100;300;500" rel="stylesheet">
+
         @livewireStyles
 
         @toastr_css
