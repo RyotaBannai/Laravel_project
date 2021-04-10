@@ -1,5 +1,5 @@
-<aside class="flex-shrink-0 w-64 flex flex-col border-r transition-all duration-300 shadow" :class="{ '-ml-64': !sidebarOpen }">
-  <div class="flex p-6 h-16 bg-gray-100">
+<aside class="flex-shrink-0 w-64 flex flex-col border-r transition-all duration-300 shadow-md" :class="{ '-ml-64': !sidebarOpen }">
+  <div class="flex p-6 h-16 bg-gray-100 border-b border-gray-100">
     <!-- Logo -->
     <div class="flex-shrink-0 flex items-center">
       <a href="{{ route('dashboard') }}">
