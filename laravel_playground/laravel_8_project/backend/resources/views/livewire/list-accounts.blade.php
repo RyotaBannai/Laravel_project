@@ -27,13 +27,16 @@
 
         <input wire:model="name" type="text">
         <br>
-        @error('name') <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-            <strong class="font-bold">Holy smokes!</strong>
-            <span class="block sm:inline">{{ $message }}</span>
-          </div>
-        @enderror
+        {{-- @error('name') 
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                <strong class="font-bold">Holy smokes!</strong>
+                <span class="block sm:inline">{{ $message }}</span>
+            </div>
+        @enderror --}}
+        <x-jet-input-error for="name"></x-jet-input-error>
         <br>
-        <button type="submit">Save</button>
+        <x-jet-action-message class="ml-3" on="saved">Done</x-jet-action-message>
+        <x-jet-button wire:loading.attr="disabled">Save</x-jet-button>
     </form>
     <button wire:click="$emitUp('banner-message')">Reset</button>
 

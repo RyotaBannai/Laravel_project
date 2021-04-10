@@ -43,7 +43,7 @@ class ListAccounts extends Component
         // return $this->redirect('/');
         // return view('livewire.list-accounts');
 
-
+        $this->emit('saved'); // emit event.
         request()->session()->flash('sweet_alert.alert', 'Yay it works!');
         // toastr()->info('Are you the 6 fingered man?'); // doesn't work
     }
