@@ -13,13 +13,18 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+        <!-- Alert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
         @livewireStyles
 
+        @toastr_css
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
+        @include('sweet::alert')
 
         <div class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
@@ -43,4 +48,7 @@
 
         @livewireScripts
     </body>
+    @jquery
+    @toastr_js
+    @toastr_render
 </html>
