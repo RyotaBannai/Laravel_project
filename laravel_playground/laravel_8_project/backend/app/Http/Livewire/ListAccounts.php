@@ -2,17 +2,19 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Account;
+// use App\Models\Account; // do not use directly bc its entangling logic.
+use App\Services\AccountService;
 
 use Livewire\Component;
-use Alert;
-use Log;
+// use Alert;
+// use Log;
 // toastr https://github.com/yoeunes/toastr
 // sweetalert https://github.com/uxweb/sweet-alert
 // tailwind https://v1.tailwindcss.com/components/alerts
 
 class ListAccounts extends Component
 {
+    private $account_service;
     public $accounts = [];
     public $name = "Jobs";
 
@@ -27,9 +29,10 @@ class ListAccounts extends Component
 
     protected $listeners = ['reset' => 'reset_name'];
 
-    public function mount()
+    public function mount(AccountService $account_service)
     {
-        $this->accounts = Account::all();
+        $this->account_service = $account_service;
+        $this->accounts = $this->account_service->getList();
     }
 
     public function save()
