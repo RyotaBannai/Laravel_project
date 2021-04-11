@@ -26,12 +26,12 @@
     </head>
     <body 
         x-data="{ sidebarOpen: true }" 
-        class="font-sans antialiased flex overflow-x-hidden h-screen"
+        class="font-sans antialiased flex"
         @switchopen.window="sidebarOpen = !sidebarOpen"
         >
         <x-jet-banner />
         {{-- @include('sweet::alert') --}}
-        <x-sidebar.sidebar-section></x-sidebar.sidebar-section>
+        <x-sidebar.sidebar-section />
 
         {{-- <div class="min-h-screen bg-gray-100"> --}}
         <div class="flex-1 bg-gray-100">

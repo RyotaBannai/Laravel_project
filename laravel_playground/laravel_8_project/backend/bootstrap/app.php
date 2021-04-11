@@ -41,6 +41,11 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+$app->singleton(
+    Illuminate\Session\DatabaseSessionHandler::class,
+    App\Session\DatabaseSessionHandler::class
+);
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application
